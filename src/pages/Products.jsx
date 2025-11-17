@@ -24,6 +24,12 @@ export default function Products() {
                                 <img src={product.image} alt={product.title} />
                                 <h3>{product.title}</h3>
                                 <p>{product.price} €</p>
+                                <button
+                                    className="details-button"
+                                    onClick={() => navigate(`/prodotti/${product.id}`)}
+                                >
+                                    Scopri di più
+                                </button>
                             </div>
                         ))}
                     </div>
