@@ -10,7 +10,7 @@ export default function ProductDetail() {
             .then((res) => res.json())
             .then((data) => setProduct(data));
     }, [id]);
-
+    if (!product) return <p>Caricamento...</p>;
     return (
         <>
 
