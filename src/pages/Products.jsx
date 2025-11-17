@@ -12,6 +12,23 @@ export default function Products() {
     }, []);
     return (
         <>
+            <div>
+                <h1>Prodotti</h1>
+
+                {products.length === 0 ? (
+                    <p>Caricamento...</p>
+                ) : (
+                    <div className="products-container">
+                        {products.map((product) => (
+                            <div key={product.id} className="product-card">
+                                <img src={product.image} alt={product.title} />
+                                <h3>{product.title}</h3>
+                                <p>{product.price} €</p>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
         </>
     )
 }
